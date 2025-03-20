@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="title">
+        <h2>About</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam,
+          facilis. Laboriosam rerum expedita itaque est dolor odit sapiente vel
+          ipsa? Et enim natus officia fugiat quia laudantium saepe illo quas?
+        </p>
+      </div>
 
+      <div class="about-center section-center">
+        <article class="about-img">
+          <img src="./image.jpg" alt="image" />
+        </article>
+        <article class="about">
+          <div class="btn-container">
+            <button class="tab-btn active" data-id="history">history</button>
+            <button class="tab-btn" data-id="vision">vision</button>
+            <button class="tab-btn" data-id="goals">goals</button>
+          </div>
+          <div class="about-content">
+            <div class="content active" id="history">
+              <h4>history</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+                magnam cumque excepturi laboriosam. Ex dolore consequatur ullam
+                eos autem fuga quis, soluta perspiciatis libero magnam saepe
+                nisi itaque quo enim.
+              </p>
+            </div>
+            <div class="content" id="vision">
+              <h4>vision</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                consectetur voluptas quaerat a aliquid esse dignissimos.
+                Blanditiis eius odit aperiam porro, esse officia dolorem
+                voluptas quia, quaerat iusto numquam totam?
+              </p>
+            </div>
+            <div class="content" id="goals">
+              <h4>goals</h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
+                error eaque quo aliquam nam excepturi ea, facilis quos repellat
+                qui fuga numquam consequuntur blanditiis quibusdam facere
+                similique amet distinctio perspiciatis!
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
