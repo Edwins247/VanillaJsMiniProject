@@ -1,0 +1,98 @@
+const products = [
+  {
+    createdAt: "2025-03-20T12:45:34.612Z",
+    title: "Hamburger",
+    price: "877.00",
+    company: "Burger King",
+    colors: ["#f15025", "#222"],
+    image: "./images/item-1.jpeg",
+    description:
+      "A delicious hamburger with a juicy beef patty, fresh vegetables, and special sauce.",
+    id: "1",
+    featured: false,
+  },
+  {
+    createdAt: "2025-03-19T08:30:22.123Z",
+    title: "Pizza Supreme",
+    price: "1299.00",
+    company: "Domino's",
+    colors: ["#ff5733", "#900C3F"],
+    image: "./images/item-2.jpeg",
+    description:
+      "A supreme pizza loaded with pepperoni, sausage, mushrooms, and extra cheese.",
+    id: "2",
+    featured: true,
+  },
+  {
+    createdAt: "2025-03-18T14:15:45.456Z",
+    title: "Pancake Delight",
+    price: "699.00",
+    company: "IHOP",
+    colors: ["#FFD700", "#8B4513"],
+    image: "./images/item-3.jpeg",
+    description:
+      "Fluffy pancakes stacked high and served with syrup and fresh berries.",
+    id: "3",
+    featured: false,
+  },
+  {
+    createdAt: "2025-03-17T10:05:12.789Z",
+    title: "Caesar Salad Bowl",
+    price: "949.00",
+    company: "Healthy Greens Co.",
+    colors: ["#32CD32", "#808080"],
+    image: "./images/item-4.jpeg",
+    description:
+      "A healthy Caesar salad with fresh lettuce, croutons, and parmesan cheese.",
+    id: "4",
+    featured: true,
+  },
+  {
+    createdAt: "2025-03-16T09:45:34.612Z",
+    title: "Grilled Salmon Plate",
+    price: "1599.00",
+    company: "Seafood Delight",
+    colors: ["#FF4500", "#4682B4"],
+    image: "./images/item-5.jpeg",
+    description:
+      "Perfectly grilled salmon served with a side of steamed vegetables and rice.",
+    id: "5",
+    featured: false,
+  },
+  {
+    createdAt: "2025-03-15T18:20:11.123Z",
+    title: "French Toast Bliss",
+    price: "749.00",
+    company: "Breakfast Club",
+    colors: ["#FFA07A", "#FFE4B5"],
+    image: "./images/item-6.jpeg",
+    description:
+      "Golden-brown French toast topped with powdered sugar and served with fresh fruit.",
+    id: "6",
+    featured: true,
+  },
+  {
+    createdAt: "2025-03-14T07:15:34.456Z",
+    title: "Spaghetti Carbonara Deluxe",
+    price: "1399.00",
+    company: "Pasta Palace",
+    colors: ["#FFDAB9", "#8B0000"],
+    image: "./images/item-7.jpeg",
+    description:
+      "Creamy spaghetti carbonara with pancetta and parmesan cheese.",
+    id: "7",
+    featured: false,
+  },
+  {
+    createdAt: "2025-03-13T16:45:00.789Z",
+    title: "Avocado Toast Special",
+    price: "599.00",
+    company: "Toast House",
+    colors: ["#98FB98", "#FF6347"],
+    image: "./images/item-8.jpeg",
+    description:
+      "Toasted bread topped with smashed avocado, cherry tomatoes, and a sprinkle of chili flakes.",
+    id: "8",
+    featured: true,
+  },
+];
