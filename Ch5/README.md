@@ -7,3 +7,4 @@
 ## 실제 개발 후
 
 ### HTML 설계
+1. 기본 설계는 단순하나 video 태그에서 자동 재생을 위해서 muted 속성과 그 외에 별도로 플레이어가 뜨게 controls, autoplay, loop 속성이 추가된 것 신경써야함
