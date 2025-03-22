@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+    <style>
+        .success, .error {
+            color: white;
+            padding: 5px;
+            margin: 5px 0 15px 0;
+        }
+
+        .success {
+            background-color: green;
+        }
+
+        .error {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>상품 리스트</h1>
+
+        <form id="product-form">
+            <div>
+                <input 
+                    type="text"
+                    id="name"
+                    placeholder="이름"
+                    class="u-full-width"
+                />
+            </div>
+            <div>
+                <input 
+                    type="number"
+                    id="price"
+                    placeholder="가격"
+                    class="u-full-width"
+                />
+            </div>
+            <div>
+                <input 
+                    type="number"
+                    id="year"
+                    min="1999"
+                    max="2999"
+                    step="1"
+                    placeholder="2024"
+                    class="u-full-width"
+                />
+            </div>
+            <input type="submit" value="저장" class="u-full-width"/>
+        </form>
+
+        <div id="product-list" class="u-full-width"></div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
