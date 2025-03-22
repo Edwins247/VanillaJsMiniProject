@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Book List</h1>
+        <form id="book-form">
+            <div>
+                <label for="title">책 이름</label>
+                <input type="text" id="title" class="u-full-width"/>
+            </div>
+            <div>
+                <label for="author">책 저자</label>
+                <input type="text" id="author" class="u-full-width"/>
+            </div>
+            <div>
+                <input type="submit" value="제출" class="u-full-width"/>
+            </div>
+        </form>
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>책 이름</th>
+                    <th>책 저자</th>
+                </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
