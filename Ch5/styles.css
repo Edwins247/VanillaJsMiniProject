@@ -93,7 +93,7 @@ header {
   transition: var(--transition);
 }
 
-.silde .switch {
+.slide .switch {
   left: 50%;
 }
 
