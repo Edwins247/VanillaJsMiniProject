@@ -531,3 +531,23 @@ p {
     font-size: 0.85rem;
     margin-right: 1rem;
 }
+
+/* about page */
+.about-text {
+    line-height: 2;
+    max-width: 45em;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.page-hero {
+    min-height: 20vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--grey-color-5);
+    color: var(--grey-color-3);
+}
+
+.page-hero-title {
+    font-weight: 500;
+}
