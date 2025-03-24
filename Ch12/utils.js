@@ -20,7 +20,7 @@ const getElement = (selection) => {
 
 // localStorage에 저장
 const setStorageItem = (name, item) => {
-    localStorage.set(name, JSON.stringify(item));
+    localStorage.setItem(name, JSON.stringify(item));
 }
 
 export {
