@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">타이핑 스피드 측정</div>
+        <div class="header">
+            <div class="wpm">
+                <div class="header_text">WPM</div>
+                <div class="curr_wpm">100</div>
+            </div>
+            <div class="cpm">
+                <div class="header_text">CPM</div>
+                <div class="curr_cpm">100</div>
+            </div>
+            <div class="errors">
+                <div class="header_text">Errors</div>
+                <div class="curr_errors">0</div>
+            </div>
+            <div class="timer">
+                <div class="header_text">Time</div>
+                <div class="curr_time">60s</div>
+            </div>
+            <div class="accuracy">
+                <div class="header_text">% Accuracy</div>
+                <div class="curr_accuracy">100</div>
+            </div>
+        </div>
+        <div class="quote">
+            아래를 클릭해서 게임을 시작하세요.
+        </div>
+        <textarea 
+            class="input_area" 
+            placeholder="여기에 타이핑을 하세요">
+        </textarea>
+        <button class="restart_btn">
+            다시 시작
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
