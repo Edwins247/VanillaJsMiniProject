@@ -1,3 +1,6 @@
+import '../cart/toggleCart.js';
+import '../toggleSidebar.js';
+
 import { formatPrice, getElement, productsUrl } from "../utils.js";
 
 const loadingEl = getElement('.page-loading');
@@ -52,5 +55,5 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 
     loadingEl.style.display = 'none';
-    
+
 })
