@@ -36,9 +36,12 @@
         </div>
         <textarea 
             class="input_area" 
-            placeholder="여기에 타이핑을 하세요">
+            placeholder="여기에 타이핑을 하세요"
+            onfocus="startGame()"
+            oninput="processCurrentText()"
+        >
         </textarea>
-        <button class="restart_btn">
+        <button class="restart_btn" onclick="resetValues()">
             다시 시작
         </button>
     </div>
