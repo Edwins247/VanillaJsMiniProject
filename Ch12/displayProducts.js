@@ -28,6 +28,9 @@ const display = (products, element, filters) => {
         })
         .join('');
 
+        // 필터링이 된 경우, 이벤트 리스너를 등록하지 않고 처리하게함(한번만 등록하면 되니까)
+        if (filters) return;
+
         element.addEventListener('click', (e) => {
             const parent = e.target.parentElement;
             if (parent.classList.contains('product-cart-btn')) {
