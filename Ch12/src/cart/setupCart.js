@@ -1,5 +1,5 @@
-import { findProduct } from '../store.js';
-import { formatPrice, getElement, getStorageItem, setStorageItem } from '../utils.js';
+import { findProduct } from '../../store.js';
+import { formatPrice, getElement, getStorageItem, setStorageItem } from '../../utils.js';
 import addToCartDom from './addToCartDom.js';
 import { openCart } from './toggleCart.js';
 

@@ -1,11 +1,11 @@
-import display from "./displayProducts.js";
-import fetchProducts from "./fetchProducts.js"
-import { setupStore } from "./store.js";
-import { getElement } from "./utils.js";
+import display from "./src/displayProducts.js";
+import fetchProducts from "./src/fetchProducts.js"
+import { setupStore } from "./src/store.js";
+import { getElement } from "./src/utils.js";
 
 // toggleSidebar 이벤트를 적용하기 위해서 import함
-import './toggleSidebar.js';
-import './cart/toggleCart.js'
+import './src/toggleSidebar.js';
+import './src/cart/toggleCart.js'
 
 const init = async () => {
 

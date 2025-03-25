@@ -1,7 +1,11 @@
-import fetchProducts from '../fetchProducts.js';
-import display from '../displayProducts.js';
-import { getElement } from '../utils.js';
-import { setupStore, store } from '../store.js';
+import '../cart/toggleCart.js';
+import '../toggleSidebar.js';
+import '../cart/setupCart.js'
+
+import fetchProducts from '../../fetchProducts.js';
+import display from '../../displayProducts.js';
+import { getElement } from '../../utils.js';
+import { setupStore, store } from '../../store.js';
 import setupSearch from '../filters/search.js';
 import setupCompanies from '../filters/companies.js';
 import setupPrice from '../filters/price.js';

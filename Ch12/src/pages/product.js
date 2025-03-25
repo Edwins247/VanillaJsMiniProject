@@ -1,10 +1,10 @@
 import { addToCart } from '../cart/setupCart.js';
 import '../cart/toggleCart.js';
-import '../toggleSidebar.js';
+import '../../toggleSidebar.js';
 
 import '../cart/setupCart.js'
 
-import { formatPrice, getElement, productsUrl } from "../utils.js";
+import { formatPrice, getElement, productsUrl } from "../../utils.js";
 
 const loadingEl = getElement('.page-loading');
 const centerEl = getElement('.single-product-center');
