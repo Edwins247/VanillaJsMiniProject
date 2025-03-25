@@ -1,5 +1,8 @@
+import { addToCart } from '../cart/setupCart.js';
 import '../cart/toggleCart.js';
 import '../toggleSidebar.js';
+
+import '../cart/setupCart.js'
 
 import { formatPrice, getElement, productsUrl } from "../utils.js";
 
@@ -12,7 +15,7 @@ const companyEl = getElement('.single-product-company');
 const priceEl = getElement('.single-product-price');
 const colorsEl = getElement('.single-product-colors');
 const descEl = getElement('.single-product-desc');
-const cartBtn = getElement('.addToCartBtn');
+const cartBtnEl = getElement('.addToCartBtn');
 
 // cart product
 let productID;
@@ -56,4 +59,8 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     loadingEl.style.display = 'none';
 
+})
+
+cartBtnEl.addEventListener('click', () => {
+    addToCart(productID);
 })

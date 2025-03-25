@@ -18,6 +18,17 @@ const getElement = (selection) => {
     throw new Error('해당 요소가 존재하지 않습니다.');
 }
 
+// localStorage에서 가져오기
+const getStorageItem = (key) => {
+    let storageItem = localStorage.getItem(key);
+    if (storageItem) {
+        storageItem = JSON.parse(localStorage.getItem(key));
+    } else {
+        storageItem = [];
+    }
+    return storageItem;
+}
+
 // localStorage에 저장
 const setStorageItem = (name, item) => {
     localStorage.setItem(name, JSON.stringify(item));
@@ -27,5 +38,6 @@ export {
     getElement,
     productsUrl,
     formatPrice,
-    setStorageItem
+    setStorageItem,
+    getStorageItem
 }
