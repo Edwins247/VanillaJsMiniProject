@@ -1,6 +1,6 @@
-import { getProductList } from "./module/productList.js";
+import { getProductSection } from "./module/productSection.js";
 
-const productCard = getProductList([
+const productSection = getProductSection('인기 상품', [
     {
         "id": 1,
         "imgSrc": "/js_basic_market/public/assets/파프리카.jpg",
@@ -27,4 +27,4 @@ const productCard = getProductList([
     }
 ]);
 
-document.body.appendChild(productCard);
+document.body.appendChild(productSection);
