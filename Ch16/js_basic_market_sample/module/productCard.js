@@ -1,12 +1,15 @@
+import { getCartToggleButton } from "./cartToggleButton.js";
 import { appendChildrenList, makeDOMwithProperties } from "./utils/dom.js";
 
-export const getProductCard = ({
+export const getProductCard = (productInfo) => {
+  const {
     imgSrc,
     name,
     discountPercent,
     price,
     originalPrice
-}) => {
+  } = productInfo;
+
   const productCard = makeDOMwithProperties("div", {
     className: "product-card",
   });
@@ -19,15 +22,9 @@ export const getProductCard = ({
     src: imgSrc,
     alt: name,
   });
-  const cartToggleBtn = makeDOMwithProperties("button", {
-    className: "cart-toggle-btn",
-    type: "button",
-  });
-  const cartImage = makeDOMwithProperties("img", {
-    className: "cart-image",
-    src: "public/assets/cart.png",
-  });
-  cartToggleBtn.appendChild(cartImage);
+
+  const cartToggleBtn = getCartToggleButton(productInfo);
+
   // Node.appendChild
   // Node.insertBefore
   appendChildrenList(productImageCon, [productImage, cartToggleBtn]);

@@ -92,6 +92,35 @@
                     "originalPrice": 1500
                 }
             ]
+        },
+        {
+            "sectionTitle": "새로 들어온 상품",
+            "productList": [
+                {
+                    "id": 9,
+                    "imgSrc": "/js_basic_market/public/assets/머핀.jpg",
+                    "name": "머핀 2개",
+                    "discountPercent": 20,
+                    "price": 2400,
+                    "originalPrice": 3000
+                },
+                {
+                    "id": 10,
+                    "imgSrc": "/js_basic_market/public/assets/당근.jpg",
+                    "name": "당근 2개",
+                    "discountPercent": 10,
+                    "price": 1800,
+                    "originalPrice": 2000
+                },
+                {
+                    "id": 11,
+                    "imgSrc": "/js_basic_market/public/assets/단호박.jpg",
+                    "name": "단호박 1개",
+                    "discountPercent": 10,
+                    "price": 1350,
+                    "originalPrice": 1500
+                }
+            ]
         }
     ]
 }
