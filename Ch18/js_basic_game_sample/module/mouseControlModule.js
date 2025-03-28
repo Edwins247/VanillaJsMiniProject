@@ -10,6 +10,16 @@ let endBoxDOM = null;
 
 const gameFieldDOM = document.getElementById('game-field');
 
+export const initMouseControlGame = () => {
+    startBoxDOM.innerHTML = '시작';
+    endBoxDOM.innerHTML = '끝';
+    boxDOMList.forEach((boxDOM) => {
+        boxDOM.style.backgroundColor = 'transparent';
+    })
+    stopTimer();
+    setTimer(0);
+}
+
 const handleSuccessGame = () => {
     stopTimer();
 

@@ -1,4 +1,14 @@
-import { setBoxDOM } from "./module/mouseControlModule.js";
+import { initMouseControlGame, setBoxDOM } from "./module/mouseControlModule.js";
+import { handleModalClose } from "./utils/modal.js";
+
+
+const initialize = () => {
+    // modal의 버튼을 세팅
+    // retryButton에 게임 상태를 원복하는 함수
+    const retryButton = document.getElementsByClassName('retry-button')[0];
+
+    retryButton.onclick = () => handleModalClose(initMouseControlGame);
+};
 
 setBoxDOM({
     row: 5,
@@ -16,3 +26,4 @@ setBoxDOM({
         [3, 4],
     ]
 });
+initialize();
