@@ -1,14 +1,12 @@
-import { getProductCard } from "./module/productCard.js";
+// 물품 목록을 모두 불러와서 페이지에 띄우기 => productList.js getProductList
 
-const sectionDOM = document.getElementsByTagName("section")[0];
+import { fetchSectionListData } from "./module/fetch.js";
+import { getProductList } from "./module/productList.js";
 
-const productCard = getProductCard({
-  id: 1,
-  imgSrc: "/js_basic_market/public/assets/파프리카.jpg",
-  name: "파프리카 2입",
-  discountPercent: 20,
-  price: 2000,
-  originalPrice: 2500,
-});
+const sectionInfoList = await fetchSectionListData();
 
-sectionDOM.appendChild(productCard);
+const productList = sectionInfoList.reduce((prev, curr) => [...prev, ...curr.productList], []);
+
+const section = document.getElementsByTagName('section')[0];
+const productListDOM = getProductList(productList);
+section.appendChild(productListDOM);
