@@ -33,6 +33,8 @@ const cardInfoList = [
 
 const snackCardList = document.getElementsByClassName('snack-card-list')[0];
 const selectButtonDOM = document.getElementsByClassName('participate-button')[0];
+const [ notyetContainerDOM, resultContainerDOM ] = document.getElementsByClassName('result-container');
+const [ , resultImageDOM, resultNameDOM, resultDescriptionDOM, selectRetryButtonDOM ] = resultContainerDOM.children;
 
 const getSelectedCard = () => {
     return document.getElementsByClassName('select')[0];
@@ -90,10 +92,21 @@ const getSelectCardDOM = ({
 };
 
 export const setSelectCards = () => {
+    // 기존의 snackCardList의 자식 요소들을 받아와서 -> 순회하면서 없애주기
+    const originalSnackCards = Object.assign([], snackCardList.children);
+    originalSnackCards.forEach((snackCard) => snackCard.remove());
+
     cardInfoList.forEach((cardInfo) => {
         const selectCardDOM = getSelectCardDOM(cardInfo);
         snackCardList.appendChild(selectCardDOM);
-    })
+    });
+
+    // localStorage에서 이미 선택되어져 있는 과자 id 가져와서 표시
+    const cardId = Number(localStorage.getItem(SELECT_RESULT_KEY));
+    if (!cardId || isNaN(cardId)) return;
+
+    handleSelectCard(cardId);
+
 }
 
 export const setSelectButton = () => {
@@ -110,5 +123,62 @@ export const setSelectButton = () => {
         }
         const cardId = selectedCard.id?.split('-')[1];
         localStorage.setItem(SELECT_RESULT_KEY, cardId);
+        setResultContainer();
     }
+}
+
+const initialize = () => {
+    // 과자가 선택되기 전의 상태를 되돌려주는 함수
+    // 1. localStorage의 선택된 cardId를 삭제
+    // 2. selectCard의 DOM을 다시 구성
+    // 3. resultContainer의 DOM을 다시 구성
+
+    localStorage.removeItem(SELECT_RESULT_KEY);
+    setSelectCards();
+    setResultContainer();
+
+    const selectSectionDOM = document.getElementById('participate-section');
+    const scrollTargetY = selectButtonDOM.offsetTop;
+
+    window.scroll({
+        top: scrollTargetY,
+        left: 0,
+        behavior: 'smooth',
+    });
+
+}
+
+export const setResultContainer = () => {
+    // result 구역에 선택된 과자를 노출시키는 함수
+    // 과자 선택 버튼 클릭 시, 페이지 랜딩 시 동작
+
+    // 1. 선택된 아이디를 localStorage로부터 받아오기
+    // 2. 선택된 아이디가 저장되어 있다면, notyetContainer를 없애고, resultContainer를 보여주기
+    // 3. cardInfoList에서 선택된 카드의 정보를 찾아서 그 정보를 resultContainer에 연결시키기
+
+    const selectedId = Number(localStorage.getItem(SELECT_RESULT_KEY));
+
+    const isSelected = !!selectedId;
+    if (!isSelected) {
+        // notyetContainer를 드러내고, resultContainer를 숨기기
+        notyetContainerDOM.style.display = 'block';
+        resultContainerDOM.style.display = 'none';
+        return;
+    }
+
+    // notyetContainer를 숨기고 resultContainer를 드러내기
+    // resultContainer에 선택된 과자의 정보를 주입하기  
+    notyetContainerDOM.style.display = 'none';
+    resultContainerDOM.style.display = 'flex';
+
+    const cardInfo = cardInfoList.find((info) => info.id === selectedId);
+    
+    resultImageDOM.src = cardInfo.imgSrc;
+    resultImageDOM.alt = cardInfo.name;
+    resultNameDOM.innerHTML = cardInfo.name;
+    resultDescriptionDOM.innerHTML = cardInfo.description;
+
+    // 다시하기 버튼 구현
+    selectRetryButtonDOM.onclick = initialize;
+
 }
