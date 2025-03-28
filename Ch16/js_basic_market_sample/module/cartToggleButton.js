@@ -1,9 +1,12 @@
 import { CART_COOKIE_KEY } from "../constants/cart.js";
 import { makeDOMwithProperties } from "./utils/dom.js";
 
+
+export const getCartInfo = () => JSON.parse(localStorage.getItem(CART_COOKIE_KEY)) || [];
+
 // 현재 해당 상품이 장바구니 안에 있는지를 판단하여 결과를 반환
 const isInCart = ({ id }) => {
-    const originalCartInfo = JSON.parse(localStorage.getItem(CART_COOKIE_KEY)) || [];
+    const originalCartInfo = getCartInfo();
 
     // cartInfo가 있다면 true가 반환, 없으면 false로 리턴함, 부정연산자를 활용했기 떄문
     return !!originalCartInfo.find((cartInfo) => cartInfo.id === id);
@@ -14,8 +17,7 @@ const isInCart = ({ id }) => {
 const addCartInfo = (productInfo) => {
   // 장바구니에 해당 물품의 정보를 저장
   // null undefined || [] => 혹시 모를 값을 위해서 or 연산 사용
-  const originalCartInfo =
-    JSON.parse(localStorage.getItem(CART_COOKIE_KEY)) || [];
+  const originalCartInfo = getCartInfo();
 
   // 같은 물품이 있다면 early-return
   if (
@@ -32,14 +34,14 @@ const addCartInfo = (productInfo) => {
 
     // 장바구니에서 해당 물품의 정보를 삭제
 const removeCartInfo = ({ id }) => {
-    const originalCartInfo = JSON.parse(localStorage.getItem(CART_COOKIE_KEY)) || [];
+    const originalCartInfo = getCartInfo();
     
     // Array.filter 사용, 지우려는 cart만 false로 리턴함
     const newCartInfo = originalCartInfo.filter((cartInfo) => cartInfo.id !== id);
     localStorage.setItem(CART_COOKIE_KEY, JSON.stringify(newCartInfo));
 }
 
-export const getCartToggleButton = (productInfo) => {
+export const getCartToggleButton = (productInfo, removeCartCallback) => {
     let inCart = isInCart(productInfo);
   const cartToggleBtn = makeDOMwithProperties("button", {
     className: "cart-toggle-btn",
@@ -52,6 +54,7 @@ export const getCartToggleButton = (productInfo) => {
             // 이미 장바구니에 있다면
             removeCartInfo(productInfo);
             cartImage.src = 'public/assets/cart.png';
+            removeCartCallback?.();
         } else {
             addCartInfo(productInfo); // 장바구니 넣기
             cartImage.src = 'public/assets/cartDisabled.png';

@@ -1,7 +1,7 @@
 import { getCartToggleButton } from "./cartToggleButton.js";
 import { appendChildrenList, makeDOMwithProperties } from "./utils/dom.js";
 
-export const getProductCard = (productInfo) => {
+export const getProductCard = (productInfo, removeCartCallback) => {
   const {
     imgSrc,
     name,
@@ -23,7 +23,7 @@ export const getProductCard = (productInfo) => {
     alt: name,
   });
 
-  const cartToggleBtn = getCartToggleButton(productInfo);
+  const cartToggleBtn = getCartToggleButton(productInfo, removeCartCallback);
 
   // Node.appendChild
   // Node.insertBefore

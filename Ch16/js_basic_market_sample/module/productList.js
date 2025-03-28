@@ -1,7 +1,7 @@
 import { makeDOMwithProperties } from "../utils/dom.js"
 import { getProductCard } from "./productCard.js"
 
-export const getProductList = (productInfoList) => {
+export const getProductList = (productInfoList, removeCartCallback) => {
     // early-return
     if (productInfoList == null || !Array.isArray(productInfoList)) return
     const productListContainer = makeDOMwithProperties('div', {
@@ -12,7 +12,7 @@ export const getProductList = (productInfoList) => {
         productListContainer.appendChild(
             getProductCard({
                 ...productInfo
-            })
+            }, removeCartCallback)
         )
     })
 
