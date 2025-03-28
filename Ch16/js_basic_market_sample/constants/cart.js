@@ -32,3 +32,11 @@ if (cartInfo.length < 1) {
     // B가 A 아래의 C 앞에 삽입되는 메서드
     sectionDOM.insertBefore(productListDOM, cartPayContainerDOM)
 }
+
+const cartAllDeleteButtonDOM = document.getElementById('remove-all-button');
+cartAllDeleteButtonDOM.onclick = () => {
+    // localStorage에 있는 장바구니 물품 목록 정보 전부 삭제
+    localStorage.removeItem(CART_COOKIE_KEY); // cartInfo라는 키를 가진 키-값 쌍이 삭제
+    // localStorage.clear(); // localStorage의 모든 키-값 쌍이 삭제
+    location.reload(); // 새로고침
+};
