@@ -1,4 +1,4 @@
-import { addToCart } from "./src/cart/setupCart.js";
+import { addToCart } from "./cart/setupCart.js";
 import { formatPrice } from "./utils.js";
 
 const display = (products, element, filters) => {
