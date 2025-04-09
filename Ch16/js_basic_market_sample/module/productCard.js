@@ -1,5 +1,5 @@
 import { getCartToggleButton } from "./cartToggleButton.js";
-import { appendChildrenList, makeDOMwithProperties } from "./utils/dom.js";
+import { appendChildrenList, makeDOMwithProperties } from "../utils/dom.js";
 
 export const getProductCard = (productInfo, removeCartCallback) => {
   const {

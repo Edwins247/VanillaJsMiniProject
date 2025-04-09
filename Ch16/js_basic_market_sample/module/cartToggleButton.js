@@ -1,5 +1,5 @@
 import { CART_COOKIE_KEY } from "../constants/cart.js";
-import { makeDOMwithProperties } from "./utils/dom.js";
+import { makeDOMwithProperties } from "../utils/dom.js";
 
 
 export const getCartInfo = () => JSON.parse(localStorage.getItem(CART_COOKIE_KEY)) || [];

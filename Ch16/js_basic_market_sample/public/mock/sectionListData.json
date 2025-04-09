@@ -5,7 +5,7 @@
             "productList": [
                 {
                     "id": 1,
-                    "imgSrc": "/js_basic_market/public/assets/파프리카.jpg",
+                    "imgSrc": "./public/assets/파프리카.jpg",
                     "name": "파프리카 2입",
                     "discountPercent": 20,
                     "price": 2000,
@@ -13,7 +13,7 @@
                 },
                 {
                     "id": 2,
-                    "imgSrc": "/js_basic_market/public/assets/파스타.jpg",
+                    "imgSrc": "./public/assets/파스타.jpg",
                     "name": "파스타",
                     "discountPercent": 10,
                     "price": 1800,
@@ -21,7 +21,7 @@
                 },
                 {
                     "id": 3,
-                    "imgSrc": "/js_basic_market/public/assets/키위.jpg",
+                    "imgSrc": "./public/assets/키위.jpg",
                     "name": "키위",
                     "discountPercent": 10,
                     "price": 2700,
@@ -29,7 +29,7 @@
                 },
                 {
                     "id": 4,
-                    "imgSrc": "/js_basic_market/public/assets/원두.jpg",
+                    "imgSrc": "./public/assets/원두.jpg",
                     "name": "원두 1봉",
                     "discountPercent": 15,
                     "price": 2650,
@@ -37,7 +37,7 @@
                 },
                 {
                     "id": 5,
-                    "imgSrc": "/js_basic_market/public/assets/아보카도.jpg",
+                    "imgSrc": "./public/assets/아보카도.jpg",
                     "name": "아보카도 3입",
                     "discountPercent": 10,
                     "price": 3600,
@@ -45,7 +45,7 @@
                 },
                 {
                     "id": 6,
-                    "imgSrc": "/js_basic_market/public/assets/식빵.jpg",
+                    "imgSrc": "./public/assets/식빵.jpg",
                     "name": "식빵 1개",
                     "discountPercent": 50,
                     "price": 1000,
@@ -53,7 +53,7 @@
                 },
                 {
                     "id": 7,
-                    "imgSrc": "/js_basic_market/public/assets/삼겹살.jpg",
+                    "imgSrc": "./public/assets/삼겹살.jpg",
                     "name": "삼겹살 300g",
                     "discountPercent": 20,
                     "price": 8000,
@@ -61,7 +61,7 @@
                 },
                 {
                     "id": 8,
-                    "imgSrc": "/js_basic_market/public/assets/바나나.jpg",
+                    "imgSrc": "./public/assets/바나나.jpg",
                     "name": "바나나 1개",
                     "discountPercent": 10,
                     "price": 2700,
@@ -69,7 +69,7 @@
                 },
                 {
                     "id": 9,
-                    "imgSrc": "/js_basic_market/public/assets/머핀.jpg",
+                    "imgSrc": "./public/assets/머핀.jpg",
                     "name": "머핀 2개",
                     "discountPercent": 20,
                     "price": 2400,
@@ -77,7 +77,7 @@
                 },
                 {
                     "id": 10,
-                    "imgSrc": "/js_basic_market/public/assets/당근.jpg",
+                    "imgSrc": "./public/assets/당근.jpg",
                     "name": "당근 2개",
                     "discountPercent": 10,
                     "price": 1800,
@@ -85,7 +85,7 @@
                 },
                 {
                     "id": 11,
-                    "imgSrc": "/js_basic_market/public/assets/단호박.jpg",
+                    "imgSrc": "./public/assets/단호박.jpg",
                     "name": "단호박 1개",
                     "discountPercent": 10,
                     "price": 1350,
@@ -98,7 +98,7 @@
             "productList": [
                 {
                     "id": 9,
-                    "imgSrc": "/js_basic_market/public/assets/머핀.jpg",
+                    "imgSrc": "./public/assets/머핀.jpg",
                     "name": "머핀 2개",
                     "discountPercent": 20,
                     "price": 2400,
@@ -106,7 +106,7 @@
                 },
                 {
                     "id": 10,
-                    "imgSrc": "/js_basic_market/public/assets/당근.jpg",
+                    "imgSrc": "./public/assets/당근.jpg",
                     "name": "당근 2개",
                     "discountPercent": 10,
                     "price": 1800,
@@ -114,7 +114,7 @@
                 },
                 {
                     "id": 11,
-                    "imgSrc": "/js_basic_market/public/assets/단호박.jpg",
+                    "imgSrc": "./public/assets/단호박.jpg",
                     "name": "단호박 1개",
                     "discountPercent": 10,
                     "price": 1350,

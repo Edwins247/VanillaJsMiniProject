@@ -1,4 +1,4 @@
-import { makeDOMwithProperties } from "../utils/dom";
+import { makeDOMwithProperties } from "../utils/dom.js";
 import { getProductList } from "./productList.js";
 
 const MAX_PRICE = Number.MAX_VALUE;

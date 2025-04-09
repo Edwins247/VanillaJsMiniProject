@@ -1,4 +1,4 @@
-import { getCartInfo } from "./cartToggleButton";
+import { getCartInfo } from "./cartToggleButton.js";
 
 const DELIVERY_FREE_PRICE = 20000;
 const DELIVERY_PRICE = 3000;
