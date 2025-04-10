@@ -7,25 +7,25 @@ import { appendChildrenList, makeDOMwithProperties } from "../utils/dom.js";
 const cardInfoList = [
     {
         id: 1,
-        imgSrc: '/js_basic_event/public/assets/초코꼬북칩.jpeg',
+        imgSrc: './public/assets/초코꼬북칩.jpeg',
         name: '초코꼬북칩',
         description: '맛있는 초코꼬북칩',
     },
     {
         id: 2,
-        imgSrc: '/js_basic_event/public/assets/나쵸.jpeg',
+        imgSrc: './public/assets/나쵸.jpeg',
         name: '나쵸',
         description: '맛있는 나쵸',
     },
     {
         id: 3,
-        imgSrc: '/js_basic_event/public/assets/허니버터칩.jpeg',
+        imgSrc: './public/assets/허니버터칩.jpeg',
         name: '허니버터칩',
         description: '맛있는 허니버터칩',
     },
     {
         id: 4,
-        imgSrc: '/js_basic_event/public/assets/홈런볼.jpeg',
+        imgSrc: './public/assets/홈런볼.jpeg',
         name: '홈런볼',
         description: '맛있는 홈런볼',
     }

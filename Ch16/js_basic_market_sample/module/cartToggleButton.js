@@ -10,8 +10,6 @@ const isInCart = ({ id }) => {
 
     // cartInfo가 있다면 true가 반환, 없으면 false로 리턴함, 부정연산자를 활용했기 떄문
     return !!originalCartInfo.find((cartInfo) => cartInfo.id === id);
-    
-    
 }
 
 const addCartInfo = (productInfo) => {
@@ -60,7 +58,7 @@ export const getCartToggleButton = (productInfo, removeCartCallback) => {
             cartImage.src = 'public/assets/cartDisabled.png';
             // confirm 메소드를 통해 확인을 받고 페이지 이동함
             if (confirm("장바구니에 담았습니다. 장바구니 페이지로 이동할까요?")) {
-                location.href = '/js_basic_market/cart.html';
+                location.href = './cart.html';
             }
         }
         inCart = !inCart;

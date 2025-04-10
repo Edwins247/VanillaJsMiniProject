@@ -6,7 +6,7 @@
 // 5. 분석된 결과가 result에 표시됨
 
 const mbtiQuestionDOM = document.getElementsByClassName('mbti-question')[0];
-const [ yesButton, noButton ] = document.getElementsByClassName('mbti-question')[0].children;
+const [ yesButton, noButton ] = document.getElementsByClassName('mbti-select')[0].children;
 const [ selectDOM, pendingDOM, resultDOM ] = document.getElementsByClassName('mbti-container');
 const mbtiResultTitleDOM = document.getElementsByClassName('mbti-result')[0];
 const mbtiResultDescriptionDOM = document.getElementsByClassName('mbti-description')[0];
