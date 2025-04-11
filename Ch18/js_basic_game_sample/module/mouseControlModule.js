@@ -135,11 +135,13 @@ export const setBoxDOM = ({
                 };
             }());
             const boxDOM = makeDOMwithProperties('div', {
-                className: 'control-box',
-                innerHTML: '끝',
+                className,
+                innerHTML,
                 id: `box-${i}-${j}`,
                 onmouseover,
             });
+
+            controlBoxContainer.appendChild(boxDOM);
 
             switch(type) {
                 case 'start':

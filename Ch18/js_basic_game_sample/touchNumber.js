@@ -4,7 +4,7 @@ import { getNowTime, getResultTimeString, setTimer, startTimer, stopTimer } from
 
 const numberButtonList = document.getElementsByClassName('number-button');
 const maxId = numberButtonList.length;
-let currentNumber = 0;
+let currentNumber = 1;
 
 const handleSuccessGame = () => {
     // 타이머 멈춤 -> 성공 모달

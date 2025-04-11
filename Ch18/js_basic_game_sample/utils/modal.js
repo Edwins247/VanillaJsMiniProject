@@ -1,4 +1,4 @@
-const modal = document.getElementsByClassName('modal')[0];
+const modalDOM = document.getElementsByClassName('modal')[0];
 const modalTitleDOM = document.getElementsByClassName('modal-title')[0];
 const modalDescriptionDOM = document.getElementsByClassName('modal-description')[0];
 
@@ -7,7 +7,7 @@ export const handleModalOpen = ({
     isSuccess,
     timeString,
 }) => {
-    modalTitleDOM.classList.add('open')
+    modalDOM.classList.add('open')
 
     if (isSuccess) {
         modalTitleDOM.innerHTML = "성공!";
@@ -19,6 +19,6 @@ export const handleModalOpen = ({
 };
 
 export const handleModalClose = (onModalClose) => {
-    modalTitleDOM.classList.remove('open');
+    modalDOM.classList.remove('open');
     onModalClose?.();
 };
